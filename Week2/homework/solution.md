@@ -5,6 +5,8 @@ Note: Execute everything from folder `Week2`.
 ```
 python homework/parametrized_etl_web_to_gcs.py
 ```
+ANSWER:
+447,770
 
 # Question 2. Scheduling with Cron
 
@@ -12,6 +14,8 @@ python homework/parametrized_etl_web_to_gcs.py
 prefect deployment build ./homework/parametrized_etl_web_to_gcs.py:etl_web_to_gcs_parent_flow -n hw_web_to_gcs --cron "0 5 1 * *" --timezone "UTC" -q 'default'
 prefect deployment apply etl_web_to_gcs_parent_flow-deployment.yaml
 ```
+ANSWER:
+0 5 1 * *
 
 # Question 3. Loading data to BigQuery
 
@@ -24,6 +28,8 @@ prefect deployment build ./homework/parametrized_etl_gcs_to_bq.py:etl_gcs_to_bq_
 prefect deployment apply etl_gcs_to_bq_parent_flow-deployment.yaml
 prefect deployment run etl-gcs-to-bq-parent-flow/hw_gcs_to_bq  -p "months=[2,3]" -p "year=2019" -p "color=yellow"
 ```
+ANSWER: 
+14,851,920
 
 # Question 4. Github Storage Block
 ```
@@ -37,6 +43,8 @@ rm etl_web_to_gcs_parent_flow-deployment.yaml .prefectignore
 rm -r data
 cd Week2
 ```
+ANSWER:
+88,605
 
 # Question 5. Email or Slack notifications
 
@@ -51,3 +59,9 @@ prefect deployment run etl-web-to-gcs-parent-flow/hw_web_to_gcs_gh -p "months=[4
 rm -r data
 cd Week2
 ```
+ANSWER: 
+514,392
+
+#Question 6 Secrets
+ANSWER:
+8
